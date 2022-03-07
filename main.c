@@ -21,16 +21,9 @@ EventGroupHandle_t xRullo;
 
 int main(void){ 
 	pllInit(0,10,0);
-	LedInit();
-	SwInit();
-	LCDInit();
 	MotoreInit();
-	InfrarossiInit();
-	//InfrarossiTestInit(); 							//Attivare in alternativa a InfrarossiInit();
-	UltrasuoniInit();
-	BuzzerInit();
-	//BuzzerTestInit();
-	ServoMotoreInit();
+	SwInit();
+	
 	
 	xRullo=xEventGroupCreate();								//creazione eventGroup
 	vTaskStartScheduler();
